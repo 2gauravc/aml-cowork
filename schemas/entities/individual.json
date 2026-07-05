@@ -8,6 +8,7 @@
   "properties": {
     "individual_id": {
       "type": "string",
+      "pattern": "^IND[0-9]{3}$",
       "description": "System generated unique identifier for the individual."
     },
     "full_name": {
