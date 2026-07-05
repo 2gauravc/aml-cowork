@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "company.schema",
+  "title": "Company Schema",
+  "description": "Reusable company entity schema used across KYC documents and cases.",
+  "type": "object",
+ 
+  "properties": {
+    "company_unique_id": {
+      "type": "string"
+    },
+    "legal_name": {
+      "type": "string"
+    },
+    "legal_form": {
+      "$ref": "../primitives/company_legal_form.json" },  
+    "incorporation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "incorporation_country": {
+      "$ref": "../primitives/country.json"
+    },
+    "registered_address": {
+      "$ref": "address.json"
+    },
+    "business_activity": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ACTIVE", "INACTIVE", "DISSOLVED", "IN_LIQUIDATION", "STRUCK_OFF", "SUSPENDED", "UNDER_ADMINISTRATION", "OTHER"]
+    }
+  },
+
+  "required": [
+    "company_unique_id",
+    "legal_name",
+    "incorporation_date",
+    "incorporation_country",
+    "registered_address"
+  ]
+}

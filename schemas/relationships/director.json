@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "director.schema",
+  "title": "Director Relationship Schema",
+  "description": "Relationship schema representing an individual appointed as a company director.",
+  "type": "object",
+  "properties": {
+    "target_company": {
+        "$ref": "../entities/company.json"
+    },
+    "individual": {
+      "$ref": "../entities/individual.json"
+    },
+    "position": {
+      "type": "string",
+      "enum": ["DIRECTOR", "MANAGING_DIRECTOR", "EXECUTIVE_DIRECTOR", "NON_EXECUTIVE_DIRECTOR", "NOMINEE_DIRECTOR", "OTHER"]
+    },
+    "appointment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "resignation_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": ["target_company", "individual", "position"]
+}

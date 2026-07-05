@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "company_legal_form.schema",
+  "title": "Legal Form",
+  "description": "Standard legal form of a registered entity.",
+  "type": "string",
+  "enum": [
+    "PRIVATE_LIMITED",
+    "LIMITED_LIABILITY_COMPANY",
+    "LIMITED_PARTNERSHIP",
+    "SOLE_PROPRIETORSHIP",
+    "PARTNERSHIP",
+    "NON_PROFIT",
+    "TRUST",
+    "FOUNDATION",
+    "OTHER"
+  ]
+}

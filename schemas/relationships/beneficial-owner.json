@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "beneficial_owner.schema",
+  "title": "Beneficial Owner Relationship Schema",
+  "description": "Relationship schema representing an individual beneficial owner.",
+  "type": "object",
+  "properties": {
+    "target_company": {
+        "$ref": "../entities/company.json"
+    }, 
+    "individual": {
+      "$ref": "../entities/individual.json"
+    },
+    "ownership_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "control_basis": {
+      "type": "string",
+      "enum": ["SHAREHOLDING", "VOTING_RIGHTS", "BOARD_CONTROL", "SENIOR_MANAGING_OFFICIAL", "OTHER"]
+    }
+  },
+  "required": ["target_company", "individual", "ownership_type", "control_basis"]
+}

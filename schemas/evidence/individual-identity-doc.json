@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "individual_id_document.schema",
+  "title": "Individual Identity Document Schema",
+  "description": "Reusable identity evidence schema for an individual, such as passport, national ID, or driving licence.",
+  "type": "object",
+
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "enum": ["PASSPORT", "NATIONAL_ID", "DRIVING_LICENCE", "RESIDENCE_PERMIT", "OTHER"]
+    },
+    "document_number": {
+      "type": "string"
+    },
+    "issuing_country": {
+      "$ref": "../primitives/country.json"
+    },
+    "issue_date": {
+      "type": "string", 
+      "format": "date"
+    },
+    "expiry_date": {
+      "type": "string", 
+      "format": "date"
+    },
+    "holder_name": {
+      "type": "string"
+    },
+    "holder_date_of_birth": {
+      "type": "string", 
+      "format": "date"
+    },
+    "holder_nationality": {
+      "$ref": "../primitives/country.json"
+    }
+  },
+
+  "required": [
+    "document_type",
+    "document_number",
+    "issuing_country",
+    "issue_date",
+    "holder_name"
+  ]
+}

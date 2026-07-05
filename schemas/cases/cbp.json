@@ -1,0 +1,128 @@
+{
+  "customer_business_profile": {
+    "customer_id": "",
+    "customer_name": "",
+    "version": "",
+    "last_updated": "",
+
+    "confidence_assessment": {
+      "overall_confidence": "",
+      "confidence_score": 0.0,
+      "confidence_comments": []
+    },
+
+    "company_details": {
+      "legal_name": {
+        "value": "",
+        "type": "string",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "registration_number": {
+        "value": "",
+        "type": "string",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "incorporation_date": {
+        "value": "",
+        "type":"date",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "incorporation_country": {
+        "value": "",
+        "type":"ISO 3166-1 alpha-2",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "entity_type": {
+        "value": "",
+        "type": "enum", 
+        "enum": ["Commercial Corporate", "Financial Institution", "Investment Fund", "Trust", "Government Entity"],
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      }
+    },
+
+    "listing_status": {
+      "is_listed": {
+        "value": "",
+        "type": "bool",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "exchange": {
+        "value": "",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "ticker": {
+        "value": "",
+        "type": "Market Identifier Code (MIC)",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      }
+    },
+
+    "industry": {
+      "registry": {
+        "industry_code": "",
+        "industry_code_description": "",
+        "classification_system": "", 
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      },
+      "bank_classification": {
+        "industry_code": "",
+        "industry_code_description": "",
+        "type": "Singapore Standard Industrial Classification (SSIC)",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      }
+    },
+
+    "principal_business_activity": {
+      "summary": {
+        "value": "",
+        "type": "string",
+        "confidence": "",
+        "last_updated": "",
+        "sources": []
+      }
+    },
+
+"shell_typology_risk": {
+  "criteria": {
+    "paid_up_capital": {
+      "description": "Assess shell risk based on paid-up capital.",
+      "input_field": "company_details.paid_up_capital",
+      "type": "money",
+      "rule": "If paid_up_capital.amount < 800 SGD (or equivalent) then assessment = 'High Risk'",
+      "confidence":"",
+      "last_updated": "",
+      "sources": []
+      }
+  },
+  "assessment": {
+    "value": "",
+    "type": "enum",
+    "enum": ["Low Risk","Medium Risk","High Risk"],
+    "confidence": "",
+    "last_updated": "",
+    "sources": []
+      }
+      
+    }
+  }
+}

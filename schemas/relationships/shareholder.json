@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shareholder.schema",
+  "title": "Shareholder Relationship Schema",
+  "description": "Relationship schema representing a company or individual shareholder.",
+  "type": "object",
+
+  "properties": {
+    "target_company": {
+    "$ref": "../entities/company.json"
+    },
+  "owner_type": {
+    "oneOf": [{"$ref": "../entities/individual.json"},{"$ref": "../entities/company.json"}]},
+  "shareholding_percentage": {
+    "type": "number",
+    "minimum": 0,
+    "maximum": 100
+    }
+  },
+  "required": [
+    "target_company", 
+    "owner_type",
+    "shareholding_percentage",
+    "ownership_type"
+  ],
+
+  "if": {
+    "properties": {
+      "owner_type": {
+        "const": "INDIVIDUAL"
+      }
+    }
+  },
+
+  "then": {
+    "required": ["individual_owner"],
+    "not": {
+      "required": ["company_owner"]
+    }
+  },
+
+  "else": {
+    "required": ["company_owner"],
+    "not": {
+      "required": ["individual_owner"]
+    }
+  }
+}

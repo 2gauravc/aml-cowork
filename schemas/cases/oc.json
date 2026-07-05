@@ -1,0 +1,71 @@
+{
+  "ownership_and_control": {
+    "customer_id": "",
+    "version": "",
+    "last_updated": "",
+
+    "confidence_assessment": {
+      "overall_confidence": "",
+      "confidence_score": 0.0,
+      "key_uncertainties": []
+    },
+
+    "ownership_structure": {
+      "graph": [],
+      "summary": {
+        "value": "",
+        "confidence": "",
+        "sources": []
+      }
+    },
+
+    "ultimate_beneficial_owners": [
+      {
+        "party_id": "",
+        "name": "",
+        "ownership_percentage": {
+          "value": 0,
+          "confidence": "",
+          "sources": []
+        },
+        "control_basis": {
+          "value": "",
+          "confidence": "",
+          "sources": []
+        }
+      }
+    ],
+
+    "controlling_parties": [],
+
+    "related_parties": [
+      {
+        "party_id": "",
+        "relationship_type": "",
+        "details": {},
+        "confidence": "",
+        "sources": []
+      }
+    ],
+
+    "nominee_arrangement_assessment": {
+      "outcome": {
+        "value": "",
+        "confidence": "",
+        "sources": []
+      },
+      "indicators": [],
+      "overall_rationale": ""
+    },
+
+    "complex_structure_assessment": {
+      "outcome": {
+        "value": "",
+        "confidence": "",
+        "sources": []
+      },
+      "complexity_factors": [],
+      "overall_rationale": ""
+    }
+  }
+}

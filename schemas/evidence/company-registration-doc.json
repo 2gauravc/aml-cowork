@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "company_registration_document.schema",
+  "title": "Company Registration Document Schema",
+  "description": "Reusable registration evidence schema for a company, such as business registration, certificate of incorporation, or registry extract.",
+  "type": "object",
+
+  "properties": {
+    "document_type": {
+      "type": "string",
+      "enum": ["BUSINESS_REGISTRATION", "CERTIFICATE_OF_INCORPORATION", "COMPANY_REGISTRY_EXTRACT", "CERTIFICATE_OF_INCUMBENCY", "OTHER"]
+    },
+    "document_number": {
+      "type": "string"
+    },
+    "issuing_country": {
+      "$ref": "../primitives/country.json"
+    },
+    "issuing_authority": {
+      "type": "string"
+    },
+    "issue_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "company_unique_id": {
+      "type": "string"
+    },
+    "legal_name": {
+      "type": "string"
+    },
+    "legal_form": {
+      "$ref": "../primitives/company_legal_form.json" },
+    "incorporation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "incorporation_country": {
+      "$ref": "../primitives/country.json"
+    },
+    "registered_address": {
+      "$ref": "../entities/address.json"
+    },
+    "company_status": {
+      "type": "string",
+      "enum": ["ACTIVE", "INACTIVE", "DISSOLVED", "IN_LIQUIDATION", "STRUCK_OFF", "SUSPENDED", "UNDER_ADMINISTRATION", "OTHER"]
+    }
+  },
+
+  "required": [
+    "document_type",
+    "document_number",
+    "issuing_country",
+    "issuing_authority",
+    "issue_date",
+    "company_unique_id",
+    "legal_name",
+    "incorporation_date",
+    "incorporation_country",
+    "registered_address",
+    "company_status"
+  ]
+}

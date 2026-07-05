@@ -1,0 +1,64 @@
+{
+  "account_activity_review": {
+    "customer_id": "",
+    "review_period": {
+      "from": "",
+      "to": ""
+    },
+    "version": "",
+    "last_updated": "",
+
+    "confidence_assessment": {
+      "overall_confidence": "",
+      "confidence_score": 0.0,
+      "key_uncertainties": []
+    },
+
+    "transaction_profile": {
+      "summary": {
+        "total_volume": "",
+        "transaction_count": "",
+        "key_products": [],
+        "key_countries": [],
+        "confidence": "",
+        "sources": []
+      }
+    },
+
+    "counterparty_assessment": {
+      "top_counterparties": [],
+      "plausibility_assessment": {
+        "value": "",
+        "confidence": "",
+        "rationale": "",
+        "sources": []
+      }
+    },
+
+    "business_plausibility": {
+      "outcome": {
+        "value": "",
+        "confidence": "",
+        "sources": []
+      },
+      "rationale": ""
+    },
+
+    "risk_concerns": [
+      {
+        "risk": "",
+        "severity": "",
+        "confidence": "",
+        "recommended_action": "",
+        "sources": []
+      }
+    ],
+
+    "aar_summary": {
+      "value": "",
+      "confidence": "",
+      "last_updated": "",
+      "sources": []
+    }
+  }
+}

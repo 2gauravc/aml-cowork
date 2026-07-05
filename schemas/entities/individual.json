@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "individual.schema",
+  "title": "Individual Schema",
+  "description": "Reusable individual entity schema used across KYC documents and cases.",
+  "type": "object",
+
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "nationality": {
+      "$ref": "../primitives/country.schema.json"
+    },
+    "residential_address": {
+      "$ref": "address.json"
+    }
+  },
+
+  "required": [
+    "full_name",
+    "date_of_birth",
+    "nationality"
+  ]
+}
