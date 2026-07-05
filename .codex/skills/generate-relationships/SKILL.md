@@ -56,6 +56,7 @@ Objects in each array must conform exactly to their schemas.
 - Never create new companies / individuals
 - Never invent IDs.
 - Every referenced ID must exist in the input entities.
+- Company relationship target fields must reference existing `company_id` values.
 - Directors must reference existing individuals.
 - Beneficial owners must reference existing individuals.
 - Shareholders may reference existing companies or existing individuals when permitted by the schema.

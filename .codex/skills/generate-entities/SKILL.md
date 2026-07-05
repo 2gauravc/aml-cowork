@@ -55,11 +55,13 @@ Read the ID patterns from the schemas each time and generate IDs that match thos
 
 For the current schemas, this means:
 
-- Company IDs match `company_unique_id`, such as `CMP001`.
+- Company IDs match `company_id`, such as `CMP001`.
 - Individual IDs match `individual_id`, such as `IND001`.
 - Address IDs match `address_id`, such as `ADD001`.
 
 Do not use longer IDs such as `CMP000001`, `IND000001`, or `ADDR000001` unless the schemas have been changed to allow them.
+
+`company_id` and `individual_id` are internal bank identifiers used for matching and relationships. They are not document-visible. Generate `business_registration_number` as the company document-visible registration identifier whenever required by the company schema.
 
 ## Output Shape
 
