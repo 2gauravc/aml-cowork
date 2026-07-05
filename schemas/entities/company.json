@@ -27,6 +27,21 @@
     "business_activity": {
       "type": "string"
     },
+    "paid_up_capital": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number"
+        },
+        "currency": {
+          "$ref": "../primitives/currency.json"
+        }
+      },
+      "required": [
+        "amount",
+        "currency"
+      ]
+    },
     "status": {
       "type": "string",
       "enum": ["ACTIVE", "INACTIVE", "DISSOLVED", "IN_LIQUIDATION", "STRUCK_OFF", "SUSPENDED", "UNDER_ADMINISTRATION", "OTHER"]
