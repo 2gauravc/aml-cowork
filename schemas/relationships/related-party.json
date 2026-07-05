@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "related_party.schema",
+  "title": "Related Party Relationship Schema",
+  "description": "Relationship schema representing a company or individual related party.",
+  "type": "object",
+  "properties": {
+    "target_company_id": {
+      "type": "string",
+      "description": "company_id of the company for which the related party relationship is identified."
+    },
+    "related_party_id": {
+      "type": "string",
+      "description": "Identifier of the related individual or company."
+    },
+    "related_party_type": {
+      "type": "string",
+      "enum": ["INDIVIDUAL", "COMPANY"]
+    },
+    "relationship_type": {
+      "type": "string",
+      "enum": ["LOAN_GUARANTOR", "BORROWER", "LENDER", "SUPPLIER", "CUSTOMER", "AFFILIATE", "COMMON_DIRECTORSHIP", "FAMILY_MEMBER", "NOMINEE", "OTHER"]
+    },
+    "relationship_description": {
+      "type": "string"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": ["target_company_id", "related_party_id", "related_party_type", "relationship_type"]
+}

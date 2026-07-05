@@ -6,9 +6,14 @@
   "type": "object",
  
   "properties": {
-    "company_unique_id": {
+    "company_id": {
       "type": "string",
-      "pattern": "^CMP[0-9]{3}$"
+      "pattern": "^CMP[0-9]{3}$",
+      "description": "Internal bank-generated company identifier used for matching and relationships. Not document-visible."
+    },
+    "business_registration_number": {
+      "type": "string",
+      "description": "External business registration number for the company. This may appear on company registration evidence and generated documents."
     },
     "legal_name": {
       "type": "string"
@@ -52,7 +57,8 @@
   },
 
   "required": [
-    "company_unique_id",
+    "company_id",
+    "business_registration_number",
     "legal_name",
     "incorporation_date",
     "incorporation_country",

@@ -5,9 +5,9 @@
   "description": "Relationship schema representing an individual beneficial owner.",
   "type": "object",
   "properties": {
-    "target_company_unique_id": {
+    "target_company_id": {
       "type": "string",
-      "description": "company_unique_id of the company that is beneficially owned or controlled."
+      "description": "company_id of the company that is beneficially owned or controlled."
     },
     "individual_id": {
       "type": "string",
@@ -23,5 +23,5 @@
       "enum": ["SHAREHOLDING", "VOTING_RIGHTS", "BOARD_CONTROL", "SENIOR_MANAGING_OFFICIAL", "OTHER"]
     }
   },
-  "required": ["target_company_unique_id", "individual_id", "ownership_percentage", "control_basis"]
+  "required": ["target_company_id", "individual_id", "ownership_percentage", "control_basis"]
 }

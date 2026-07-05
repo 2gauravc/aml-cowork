@@ -6,13 +6,13 @@
   "type": "object",
 
   "properties": {
-    "target_company_unique_id": {
+    "target_company_id": {
       "type": "string",
-      "description": "company_unique_id of the company whose shares are held."
+      "description": "company_id of the company whose shares are held."
     },
     "shareholder_id": {
       "type": "string",
-      "description": "Identifier of the individual shareholder or company_unique_id of the company shareholder."
+      "description": "individual_id of the individual shareholder or company_id of the company shareholder."
     },
     "shareholder_type": {
       "type": "string",
@@ -29,7 +29,7 @@
     }
   },
   "required": [
-    "target_company_unique_id",
+    "target_company_id",
     "shareholder_id",
     "shareholder_type",
     "shareholding_percentage",

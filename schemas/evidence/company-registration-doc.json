@@ -23,7 +23,20 @@
       "type": "string",
       "format": "date"
     },
-    "company_unique_id": {
+    "internal_reference": {
+      "type": "object",
+      "description": "Internal matching fields used to link evidence to bank entities. These fields are not document-visible.",
+      "properties": {
+        "company_id": {
+          "type": "string",
+          "description": "Internal bank-generated company identifier used only for matching. Not document-visible."
+        }
+      },
+      "required": [
+        "company_id"
+      ]
+    },
+    "business_registration_number": {
       "type": "string"
     },
     "legal_name": {
@@ -53,7 +66,8 @@
     "issuing_country",
     "issuing_authority",
     "issue_date",
-    "company_unique_id",
+    "internal_reference",
+    "business_registration_number",
     "legal_name",
     "incorporation_date",
     "incorporation_country",

@@ -9,7 +9,7 @@
     "individual_id": {
       "type": "string",
       "pattern": "^IND[0-9]{3}$",
-      "description": "System generated unique identifier for the individual."
+      "description": "Internal bank-generated individual identifier used for matching and relationships. Not document-visible."
     },
     "full_name": {
       "type": "string"

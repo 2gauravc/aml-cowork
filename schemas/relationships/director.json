@@ -5,9 +5,9 @@
   "description": "Relationship schema representing an individual appointed as a company director.",
   "type": "object",
   "properties": {
-    "target_company_unique_id": {
+    "target_company_id": {
       "type": "string",
-      "description": "company_unique_id of the company where the individual is appointed as director."
+      "description": "company_id of the company where the individual is appointed as director."
     },
     "individual_id": {
       "type": "string",
@@ -26,5 +26,5 @@
       "format": "date"
     }
   },
-  "required": ["target_company_unique_id", "individual_id", "position"]
+  "required": ["target_company_id", "individual_id", "position"]
 }
