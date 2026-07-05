@@ -23,7 +23,9 @@
       "$ref": "../primitives/country.json"
     },
     "registered_address": {
-      "$ref": "address.json"
+      "type": "string",
+      "pattern": "^ADD[0-9]{3}$",
+      "description": "Address ID referencing an address entity."
     },
     "business_activity": {
       "type": "string"
