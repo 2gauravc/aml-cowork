@@ -5,11 +5,13 @@
   "description": "Relationship schema representing an individual appointed as a company director.",
   "type": "object",
   "properties": {
-    "target_company": {
-        "$ref": "../entities/company.json"
+    "target_company_unique_id": {
+      "type": "string",
+      "description": "company_unique_id of the company where the individual is appointed as director."
     },
-    "individual": {
-      "$ref": "../entities/individual.json"
+    "individual_id": {
+      "type": "string",
+      "description": "Identifier of the individual appointed as director."
     },
     "position": {
       "type": "string",
@@ -24,5 +26,5 @@
       "format": "date"
     }
   },
-  "required": ["target_company", "individual", "position"]
+  "required": ["target_company_unique_id", "individual_id", "position"]
 }

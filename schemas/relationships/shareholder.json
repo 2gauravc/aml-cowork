@@ -6,43 +6,33 @@
   "type": "object",
 
   "properties": {
-    "target_company": {
-    "$ref": "../entities/company.json"
+    "target_company_unique_id": {
+      "type": "string",
+      "description": "company_unique_id of the company whose shares are held."
     },
-  "owner_type": {
-    "oneOf": [{"$ref": "../entities/individual.json"},{"$ref": "../entities/company.json"}]},
-  "shareholding_percentage": {
-    "type": "number",
-    "minimum": 0,
-    "maximum": 100
+    "shareholder_id": {
+      "type": "string",
+      "description": "Identifier of the individual shareholder or company_unique_id of the company shareholder."
+    },
+    "shareholder_type": {
+      "type": "string",
+      "enum": ["INDIVIDUAL", "COMPANY"]
+    },
+    "shareholding_percentage": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "ownership_type": {
+      "type": "string",
+      "enum": ["DIRECT", "INDIRECT", "NOMINEE", "OTHER"]
     }
   },
   "required": [
-    "target_company", 
-    "owner_type",
+    "target_company_unique_id",
+    "shareholder_id",
+    "shareholder_type",
     "shareholding_percentage",
     "ownership_type"
-  ],
-
-  "if": {
-    "properties": {
-      "owner_type": {
-        "const": "INDIVIDUAL"
-      }
-    }
-  },
-
-  "then": {
-    "required": ["individual_owner"],
-    "not": {
-      "required": ["company_owner"]
-    }
-  },
-
-  "else": {
-    "required": ["company_owner"],
-    "not": {
-      "required": ["individual_owner"]
-    }
-  }
+  ]
 }

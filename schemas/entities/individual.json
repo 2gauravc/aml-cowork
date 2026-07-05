@@ -6,6 +6,10 @@
   "type": "object",
 
   "properties": {
+    "individual_id": {
+      "type": "string",
+      "description": "System generated unique identifier for the individual."
+    },
     "full_name": {
       "type": "string"
     },
@@ -22,6 +26,7 @@
   },
 
   "required": [
+    "individual_id",
     "full_name",
     "date_of_birth",
     "nationality"
